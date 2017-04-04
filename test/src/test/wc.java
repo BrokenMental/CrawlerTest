@@ -26,7 +26,7 @@ public class wc {
 		if(rs.next()){
 			
 		}else{
-			sql = "INSERT INTO 'test'.'record'" + "('URL') VALUES "+"(?);";
+			sql = "INSERT INTO Crawler.Record" + "(URL) VALUES "+"(?);";
 			PreparedStatement stmt = db.conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			stmt.setString(1,  URL);
 			stmt.execute();

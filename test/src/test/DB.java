@@ -13,7 +13,7 @@ public class DB {
 	public DB(){
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/test";
+			String url = "jdbc:mysql://localhost:3306/Crawler";
 			conn = DriverManager.getConnection(url, "root", "1234");
 			System.out.println("conn built");
 		} catch (SQLException e) {
