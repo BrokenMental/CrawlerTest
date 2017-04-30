@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/HOME/git/CrawlerTest/test2/WebContent/WEB-INF/lib/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/HOME/git/CrawlerTest/test2/WebContent/WEB-INF/lib/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="D:/etc/진욱/Dropbox/Dropbox(Home)/Dropbox/공부/3학년/1학기/Start-Up 프로젝트/참고자료/라이브러리/twitter4j-core-4.0.4.jar"/>
+	<classpathentry kind="lib" path="D:/etc/진욱/Dropbox/Dropbox(Home)/Dropbox/공부/3학년/1학기/Start-Up 프로젝트/참고자료/라이브러리/twitter4j-stream-4.0.4.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
