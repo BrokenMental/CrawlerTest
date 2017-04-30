@@ -1,4 +1,4 @@
-package testjava;
+package test3;
 
 import java.io.IOException;
 import java.util.Iterator;
