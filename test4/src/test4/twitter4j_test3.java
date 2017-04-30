@@ -13,7 +13,7 @@ public class twitter4j_test3{
     public static void main(String[] args) {
     	Twitter twitter = TwitterFactory.getSingleton();
         try {
-            Query query = new Query("단어");
+            Query query = new Query("단어"); // Query에 빈칸을 넣게되면 오류가 발생, 트위터에서 공백검색을 막아서 그런것 같다.
             QueryResult result;
             do {
                 result = twitter.search(query);
