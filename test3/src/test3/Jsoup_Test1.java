@@ -9,18 +9,19 @@ public class Jsoup_Test1 {
 	public static void main(String[] args) throws Exception{
 		String URL = "https://news.google.co.kr";
 		Document doc = Jsoup.connect(URL).get();
-		Elements el0 = doc.select("div.esc-lead-article-title-wrapper");
-		Elements el1 = doc.select("div.esc-lead-article-title-wrapper span.titletext");
-		Elements el2 = doc.select("div.esc-lead-article-title-wrapper a");
-		Elements el3 = doc.select("div.section-stream-content");
-		Elements el4 = doc.select("div.section-list");
-		Elements el5 = doc.select("div.esc-lead-article-title-wrapper id.MAA4AEgCUABgAWoCa3I"); // 안됌
-		Elements el6 = doc.select("table.esc-layout-table tbody tr td.esc-layout-article-cell a"); // 링크 안뜸
+		Elements el = doc.select("div.esc-default-layout-wrapper");
 		
-		for(Element Temp: el2){
+		for(Element Temp: el){
 			//System.out.println(Temp.text());
-			System.out.println("제목 : " +Temp.text());
-			System.out.println("링크 : " +Temp.attr("href"));
+			if(Temp.select("div.esc-thumbnail-image-wrapper img").attr("src").equals("")){
+				System.out.println("imgsrc : " +Temp.select("div.esc-thumbnail-image-wrapper img").attr("imgsrc"));
+			}else{
+				System.out.println("img : " +Temp.select("div.esc-thumbnail-image-wrapper img").attr("src"));
+			}
+			System.out.println("group : " +Temp.select("span.al-attribution-source").text());
+			System.out.println("name : " +Temp.select("div.esc-lead-article-title-wrapper a").text());
+			System.out.println("addr : " +Temp.select("div.esc-lead-article-title-wrapper a").attr("href"));
+			System.out.println("----------------------------------------------------------------------------");
 		}
 	}
 }
